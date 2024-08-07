@@ -67,3 +67,26 @@ None
 2024-08-04 14:10:27,790 - __main__ - INFO - Best Score: 0.9225
 2024-08-04 14:10:32,029 - __main__ - INFO - Scatter plot created successfully
 2024-08-04 14:10:32,029 - __main__ - INFO - Admission prediction process completed successfully
+2024-08-06 18:49:08,464 - __main__ - INFO - Starting admission prediction process
+2024-08-06 18:49:08,513 - __main__ - INFO - Data loaded successfully
+2024-08-06 18:49:08,528 - __main__ - INFO - First few rows of the dataframe:
+   Serial_No  GRE_Score  TOEFL_Score  University_Rating  SOP  LOR   CGPA  Research  Admit_Chance
+0          1        337          118                  4  4.5   4.5  9.65         1          0.92
+1          2        324          107                  4  4.0   4.5  8.87         1          0.76
+2          3        316          104                  3  3.0   3.5  8.00         1          0.72
+3          4        322          110                  3  3.5   2.5  8.67         1          0.80
+4          5        314          103                  2  2.0   3.0  8.21         0          0.65
+2024-08-06 18:49:08,534 - __main__ - INFO - Dataframe information:
+None
+2024-08-06 18:49:08,543 - __main__ - INFO - Data preprocessed successfully
+2024-08-06 18:49:08,549 - __main__ - INFO - Data split successfully
+2024-08-06 18:49:10,545 - __main__ - INFO - Model trained successfully
+2024-08-06 18:49:10,549 - __main__ - INFO - Confusion Matrix:
+[[61  4]
+ [ 2 33]]
+2024-08-06 18:49:10,549 - __main__ - INFO - Accuracy: 0.94
+2024-08-06 18:49:15,629 - __main__ - INFO - Loss curve plotted successfully
+2024-08-06 18:51:51,418 - __main__ - INFO - Best Parameters: {'alpha': 0.0001, 'hidden_layer_sizes': (50,), 'learning_rate': 'constant', 'max_iter': 1000}
+2024-08-06 18:51:51,418 - __main__ - INFO - Best Score: 0.9225
+2024-08-06 18:51:54,035 - __main__ - INFO - Scatter plot created successfully
+2024-08-06 18:51:54,035 - __main__ - INFO - Admission prediction process completed successfully

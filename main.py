@@ -1,4 +1,5 @@
 import logging
+import os
 import warnings
 from sklearn.exceptions import ConvergenceWarning
 from src.data.data_loader import load_data
@@ -6,13 +7,17 @@ from src.feature.build_features import preprocess_data, split_data
 from src.model.model import train_model, evaluate_model, perform_grid_search
 from src.visualization.visualization import plot_loss_curve, plot_scatter
 
+# Ensure the log file exists
+log_file_exists = os.path.exists('app.log')
+if not log_file_exists:
+    with open('app.log', 'w') as f:
+        f.write('Log file created.\n')
+
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='admission_prediction.log'
-)
-logger = logging.getLogger(__name__)
+def setup_logging():
+    logging.basicConfig(level=logging.INFO, filename='app.log', filemode='a', format='%(asctime)s - %(levelname)s - %(message)s')
+
+setup_logging()
 
 # Filter out ConvergenceWarnings
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
